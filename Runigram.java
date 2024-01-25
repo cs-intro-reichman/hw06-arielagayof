@@ -143,8 +143,8 @@ public class Runigram {
 	 */
 	public static Color[][] scaled(Color[][] image, int width, int height) {
 		Color[][] scaled = new Color[height][width];
-		double scaleW = (double)(image[0].length / width);
-		double scaleH = (double)(image.length / height);
+		double scaleW = (double)(image[0].length) / width;
+		double scaleH = (double)(image.length) / height;
 		for (int i= 0; i < height ; i++) {
 			for (int j = 0; j < width ; j++) {
 				scaled[i][j] = image[(int)(i * scaleH)][(int)(j * scaleW)];
@@ -213,7 +213,7 @@ public class Runigram {
 		StdDraw.setTitle("Runigram 2023");
 		int height = image.length;
 		int width = image[0].length;
-		StdDraw.setCanvasSize(width, height);
+		StdDraw.setCanvasSize(height, width);
 		StdDraw.setXscale(0, width);
 		StdDraw.setYscale(0, height);
         // Enables drawing graphics in memory and showing it on the screen only when
